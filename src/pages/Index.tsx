@@ -15,13 +15,15 @@ const Index = () => {
           <WelcomeScreen onStart={() => setCurrentScreen("chat")} />
         )}
         {currentScreen === "chat" && (
-            <ChatInterface onEnd={() => setCurrentScreen("end")} />
+          <ChatInterface onEnd={() => setCurrentScreen("end")} />
         )}
 
         {currentScreen === "end" && (
-            <EndScreen OnRestart={() => setCurrentScreen("welcome")} />
+          <EndScreen OnRestart={() => setCurrentScreen("welcome")} />
         )}
       </div>
     </div>
   );
 };
+
+export default Index;

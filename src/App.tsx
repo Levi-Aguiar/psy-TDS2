@@ -1,11 +1,13 @@
-import { ChatInterface } from "./components/ChatInterface";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function App() {
-  return (
-    <div>
-      <ChatInterface onEnd={() => console.log("Voltar clicado")} />
-    </div>
-  );
-}
+import Index from "./pages/Index";
+
+const App = () => (
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Index />} />
+    </Routes>
+  </BrowserRouter>
+);
 
 export default App;
